@@ -18,6 +18,8 @@ import LoginContainer from './containers/LoginContainer';
 import HelmContainer from './containers/HelmContainer';
 import FacilityContainer from './containers/FacilityContainer';
 import FacilityMain from './components/facility/FacilityMain.js';
+import GoalsContainer from './containers/GoalsContainer';
+import GoalContainer from './containers/GoalContainer';
 
 import NoMatch from './components/common/NoMatch';
 import ResetPasswordContainer from './containers/ResetPasswordContainer';
@@ -46,6 +48,7 @@ ReactDOM.render(
         <Route path="facility/:id" component={requireAuth(FacilityContainer)}>
           <IndexRoute component={FacilityMain} />
         </Route>
+        <Route path="/goals" component={GoalsContainer} />
         <Route path="*" component={NoMatch}/>
       </Route>
     </Router>
