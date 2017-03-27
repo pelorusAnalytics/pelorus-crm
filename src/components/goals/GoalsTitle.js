@@ -72,13 +72,14 @@ class GoalsTitle extends Component {
     )
 
     const toggleButton = (
-      <button className="btn btn-primary" onClick={toggleForm}>Add Goal</button>
+      <button className="btn btn-primary" onClick={toggleForm}>Toggle Goal Form</button>
     )
     return (
       <div className="row wrapper border-bottom white-bg page-header" style={{paddingBottom: "15px"}} >
         <h2 className="text-center">Predefined Goals</h2>
         <div className="container">
           {formActive ? goalForm : ''}
+          <hr />
           {toggleButton}
         </div>
       </div>
