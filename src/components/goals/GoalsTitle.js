@@ -46,6 +46,14 @@ class GoalsTitle extends Component {
           <select className="form-control" name="category" onChange={this.onChange}>
             <option value="">Choose catgegory</option>
             <option value="Recovery">Recovery</option>
+            <option value="Financial">Financial</option>
+            <option value="Career">Career</option>
+            <option value="Academic">Academic</option>
+            <option value="Service">Service</option>
+            <option value="Health">Health</option>
+            <option value="Relationships">Relationships</option>
+            <option value="Spiritual">Spiritual</option>
+            <option value="Legal">Legal</option>
           </select>
         </div>
         <div>
