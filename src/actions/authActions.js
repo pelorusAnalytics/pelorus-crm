@@ -25,10 +25,15 @@ export function login(data) {
   return dispatch => {
     return axios.post(`${defaultUrl}/user_token`, data).then(res => {
       const token = res.data.jwt;
-      localStorage.setItem('jwtToken', token);
-      setAuthorizationToken(token);
-      console.log(jwtDecode(token));
-      dispatch(setCurrentUser(jwtDecode(token)));
+      const decode = jwtDecode(token);
+
+      if(decode.role === "admin") {
+        localStorage.setItem('jwtToken', token);
+        setAuthorizationToken(token);
+        dispatch(setCurrentUser(jwtDecode(token)));
+      } else {
+        alert('No authorized');
+      }
     })
     .catch(err => {
       alert('Invalid login');
