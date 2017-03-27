@@ -53,6 +53,7 @@ class TopNav extends Component {
           <div className="navbar-collapse collapse">
             <ul className="nav navbar-nav">
               <li><Link to="/helm">Home</Link></li>
+              <li><Link to="/goals">Goals</Link></li>
             </ul>
             {headerLogo}
             {this.props.authenticated ? userLinks : guestLinks}
